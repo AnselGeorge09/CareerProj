@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projected Outcome and Salary for Software Developers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="vex.png" type="image/x-icon">
+    <style>
+        body {
+            background-color: rosybrown;
+            padding-top: 20px;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4 text-center">Projected Outcome and Salary for Software Developers</h1>
+        
+        <div class="card">
+            <div class="card-body text-center">
+                <h2 class="card-title">Job Outlook</h2>
+                <p class="card-text">Employment opportunities for software developers are projected to grow 26% from 2022 to 2032, much faster than the average for all occupations.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body text-center">
+                <h2 class="card-title">Median Annual Salary</h2>
+                <p class="card-text">
+                    When it comes to the financial side of being a software developer, things look pretty good! As of May 2023, the median annual salary for software developers was around $132,270. That’s not too shabby, right? This means that half of all developers make more than that amount, and many experienced pros can earn even more. The great thing is that salaries can vary based on where you live, your level of experience, and the specific tech stack you work with. For instance, developers in tech hubs like Silicon Valley or New York City often see higher pay due to the cost of living and demand for talent. Overall, if you’re considering a career in software development, you can expect a solid paycheck along with plenty of opportunities for growth and advancement in your career!
+                </p>
+                <img src="3.jpg" alt="Median Annual Salary for Software Developers" class="img-fluid mb-3">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body text-center">
+                <h2 class="card-title">Salary Range</h2>
+                <p class="card-text">Salaries can vary widely based on experience, location, and company. Entry-level positions may start around $78,000, while experienced developers can earn over $200,000 annually.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body text-center">
+                <h2 class="card-title">States Avg </h2>
+                <p class="card-text">Select a state to see the average salary:</p>
+                <select id="stateSelect" class="form-control mb-2">
+                    <option value="">Select a state</option>
+                </select>
+                <p id="salaryInfo" class="mt-2"></p>
+                <p class="card-text"><Strong>Used Indeed.com, Glassdoor.com, and google for avg's</Strong></p>
+            </div>
+        </div>
+
+        <div class="alert alert-info text-center" role="alert">
+            <strong>Note:</strong> Salaries can vary significantly by state, company size, industry, and individual experience. Always research current data for the most accurate information.
+        </div>
+
+        <div class="text-center">
+            <a href="index.html" class="btn btn-primary mt-3">Back to Homepage</a>
+        </div>
+    </div>
+
+    <footer class="footer text-center mt-4">
+        <p> Made by Ansel for APCSP CyberSecurity Project</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script> // used AI for states and values, prices entered by me 
+        const statesData = {
+            'Alabama': '$87,000', 'Alaska': '$95,000', 'Arizona': '$98,000', 'Arkansas': '$82,000',
+            'California': '$139,199', 'Colorado': '$105,000', 'Connecticut': '$102,000', 'Delaware': '$98,000',
+            'Florida': '$95,000', 'Georgia': '$100,000', 'Hawaii': '$90,000', 'Idaho': '$85,000',
+            'Illinois': '$105,000', 'Indiana': '$88,000', 'Iowa': '$86,000', 'Kansas': '$87,000',
+            'Kentucky': '$85,000', 'Louisiana': '$84,000', 'Maine': '$88,000', 'Maryland': '$112,000',
+            'Massachusetts': '$117,000', 'Michigan': '$92,000', 'Minnesota': '$98,000', 'Mississippi': '$80,000',
+            'Missouri': '$89,000', 'Montana': '$83,000', 'Nebraska': '$86,000', 'Nevada': '$93,000',
+            'New Hampshire': '$95,000', 'New Jersey': '$108,000', 'New Mexico': '$85,000', 'New York': '$119,704',
+            'North Carolina': '$95,000', 'North Dakota': '$84,000', 'Ohio': '$90,000', 'Oklahoma': '$85,000',
+            'Oregon': '$102,000', 'Pennsylvania': '$98,000', 'Rhode Island': '$95,000', 'South Carolina': '$88,000',
+            'South Dakota': '$82,000', 'Tennessee': '$90,000', 'Texas': '$105,000', 'Utah': '$95,000',
+            'Vermont': '$88,000', 'Virginia': '$105,000', 'Washington': '$123,425', 'West Virginia': '$80,000',
+            'Wisconsin': '$90,000', 'Wyoming': '$82,000', 'District of Columbia': '$115,000'
+        };
+
+        const stateSelect = document.getElementById('stateSelect');
+        const salaryInfo = document.getElementById('salaryInfo');
+
+        Object.keys(statesData).sort().forEach(state => {
+            const option = document.createElement('option');
+            option.value = state;
+            option.textContent = state;
+            stateSelect.appendChild(option);
+        });
+
+        stateSelect.addEventListener('change', function() {
+            const selectedState = this.value;
+            if (selectedState in statesData) {
+                salaryInfo.textContent = `Average salary in ${selectedState}: ${statesData[selectedState]}`;
+            } else {
+                salaryInfo.textContent = '';
+            }
+        });
+    </script>
+</body>
+</html>

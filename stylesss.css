@@ -1,0 +1,22 @@
+body {
+    background-color: #E8ADAA; /* Rose color */
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    background-color: #E8ADAA;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

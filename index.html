@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="styles.css"><title>Software Developers Info</title>
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="icon" href="vex.png" type="image/x-icon">
+
+</head>
+<body>
+    <div id="particles-js"></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Software Developer Info</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" id="showAll">Homepage</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More Info
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="education.html" data-target="#developer1">Education</a>
+                        <a class="dropdown-item" href="projected-outcome.html" data-target="#developer2">Projected Outcome and Salary</a>
+                        <a class="dropdown-item" href="daily-responsibilities.html" data-target="#developer3">Daily Responsibilities</a>
+                        <a class="dropdown-item" href="reasoning.html" data-target="#developer4">Reasoning</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+   
+
+    <div class="container">
+        <h1 class="text-center"><img src="php.gif" alt="PHP icon" class="icon-php">Software Developers Info </h1>
+        <p class="text-center">By: Ansel G</p>
+        <div class="text-center">
+            <a class="btn btn-primary hover-button" href="education.html" data-target="#developer1">Education</a>
+            <a class="btn btn-primary hover-button" href="projected-outcome.html" data-target="#developer2">Projected Outcome and Salary</a>
+            <a class="btn btn-primary hover-button" href="daily-responsibilities.html" data-target="#developer3">Daily Responsibilities</a>
+            <a class="btn btn-primary hover-button" href="reasoning.html" data-target="#developer4">Reasoning</a>
+        </div>
+    </div>
+
+    <footer class="footer text-center">
+        <p> Made by Ansel for APCSP CyberSecurity Project</p>
+    </footer>
+
+    <!-- Include jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script src="particles.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: false },
+                size: { value: 4, random: true },
+                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.3, width: 2 },
+                move: { enable: true, speed: 3, direction: "none", random: false, straight: false, out_mode: "out", bounce: true }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>
